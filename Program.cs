@@ -192,16 +192,51 @@
             //************************************************************************
             //************************************************************************
 
-            int soucet = 0;
-            Console.Write("Zadejte celé číslo: ");
-            int cislo = int.Parse(Console.ReadLine());
-            while (cislo > 0)
+            //int soucet = 0;
+            //Console.Write("Zadejte celé číslo: ");
+            //int cislo = int.Parse(Console.ReadLine());
+            //while (cislo > 0)
+            //{
+            //    Console.WriteLine("Součet = {0} + {1}", soucet, cislo);
+            //    soucet += cislo;
+            //    cislo -= 1;
+            //}
+            //Console.WriteLine("Součet = {0}", soucet);
+
+            //************************************************************************
+            //************************************************************************
+
+            string provestVypocet;
+            do
             {
-                Console.WriteLine("Součet = {0} + {1}", soucet, cislo);
-                soucet += cislo;
-                cislo -= 1;
-            }
-            Console.WriteLine("Součet = {0}", soucet);
+                Console.Write("Zadejte první číslo: ");
+                int x = Int32.Parse(Console.ReadLine());
+                Console.Write("Zadejte druhé číslo: ");
+                int y = Int32.Parse(Console.ReadLine());
+                Console.Write("Zadejte požadovanou operaci (+ - * /): ");
+                string operace = Console.ReadLine();
+
+                switch (operace)
+                {
+                    case "+":
+                        Console.WriteLine("{0} + {1} = {2}", x, y, x + y);
+                        break;
+                    case "-":
+                        Console.WriteLine("{0} - {1} = {2}", x, y, x - y);
+                        break;
+                    case "*":
+                        Console.WriteLine("{0} * {1} = {2}", x, y, x * y);
+                        break;
+                    case "/":
+                        Console.WriteLine("{0} / {1} = {2}", x, y, x / y);
+                        break;
+                    default:
+                        Console.WriteLine("Byla zadána neplatná operace!");
+                        break;
+                }
+                Console.Write("Chcete provést další výpočet (ano / ne): ");
+                provestVypocet = Console.ReadLine();
+            } while (provestVypocet == "ano");
 
             Console.ReadKey();
         }
