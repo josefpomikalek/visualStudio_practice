@@ -329,30 +329,47 @@
             //************************************************************************
             //************************************************************************
 
-            // Připravíme si pole čísel
-            int[] poleCisel = new int[3];
-            poleCisel[0] = 3;
-            poleCisel[1] = 7;
-            poleCisel[2] = 17;
+            //// Připravíme si pole čísel
+            //int[] poleCisel = new int[3];
+            //poleCisel[0] = 3;
+            //poleCisel[1] = 7;
+            //poleCisel[2] = 17;
 
-            // Připravíme si pole řetězců
-            string[] poleRetezcu = new string[4];
-            poleRetezcu[0] = "jedna";
-            poleRetezcu[1] = "dva";
-            poleRetezcu[2] = "tři";
-            poleRetezcu[3] = "čtyři";
+            //// Připravíme si pole řetězců
+            //string[] poleRetezcu = new string[4];
+            //poleRetezcu[0] = "jedna";
+            //poleRetezcu[1] = "dva";
+            //poleRetezcu[2] = "tři";
+            //poleRetezcu[3] = "čtyři";
 
-            Console.WriteLine("Pole čisel obsahuje následující prvky:");
-            foreach (int item in poleCisel)
+            //Console.WriteLine("Pole čisel obsahuje následující prvky:");
+            //foreach (int item in poleCisel)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine("Pole řetězců obsahuje následující prvky:");
+            //foreach (string item in poleRetezcu)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //************************************************************************
+            //************************************************************************
+
+            for (int i = 1; i <= 10; i++)
             {
-                Console.WriteLine(item);
+                // V každém běhu cyklu se vykoná tento vnořený cyklus
+                for (int j = 1; j <= 10; j++)
+                {
+                    // Vypisuje násobky čísla na jeden řádek
+                    Console.Write("{0} ", i * j);
+                }
+                // Odřádkujeme, abychom násobky dalšího čísla vypsali na samostatný řádek
+                // a cyklus jede znovu
+                Console.WriteLine();
             }
 
-            Console.WriteLine("Pole řetězců obsahuje následující prvky:");
-            foreach (string item in poleRetezcu)
-            {
-                Console.WriteLine(item);
-            }
 
             Console.ReadKey();
         }
