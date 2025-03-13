@@ -373,33 +373,51 @@
             //************************************************************************
             //************************************************************************
 
-            string dalsiStudent;
-            do
+            //string dalsiStudent;
+            //do
+            //{
+            //    double soucetZnamek = 0;
+            //    int pocetZnamek = 0;
+            //    int zadanaZnamka = 0;
+
+            //    do
+            //    {
+            //        Console.WriteLine("Zadejte známku studenta (pokud chcete zadávání ukončit, zadejte nulu):");
+            //        zadanaZnamka = Int32.Parse(Console.ReadLine());
+            //        if (zadanaZnamka != 0)
+            //        {
+            //            soucetZnamek += zadanaZnamka;
+            //            pocetZnamek += 1;
+            //        }
+            //        // Cyklus skončí, když uživatel zadá nulu.
+            //    } while (zadanaZnamka != 0);
+
+            //    // Vypočteme aritmetický průměr známek studenta.
+            //    double prumer = soucetZnamek / pocetZnamek;
+            //    Console.WriteLine("Průměr známek studenta je {0}", prumer);
+
+            //    Console.WriteLine("Chcete vypočítat průměr známek pro dalšího studenta? (A/N)");
+            //    dalsiStudent = Console.ReadLine();
+
+            //} while (dalsiStudent == "A");
+
+            //************************************************************************
+            //************************************************************************
+
+            int soucet = 0;
+            Console.WriteLine("Kolik budete chtít zadat čísel:");
+            int pocetCisel = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Zadávejte čísla. Pro předčasné ukončení zadejte K");
+            for (int i = 0; i < pocetCisel; i++)
             {
-                double soucetZnamek = 0;
-                int pocetZnamek = 0;
-                int zadanaZnamka = 0;
-
-                do
+                string zadane = Console.ReadLine();
+                if (zadane == "K")
                 {
-                    Console.WriteLine("Zadejte známku studenta (pokud chcete zadávání ukončit, zadejte nulu):");
-                    zadanaZnamka = Int32.Parse(Console.ReadLine());
-                    if (zadanaZnamka != 0)
-                    {
-                        soucetZnamek += zadanaZnamka;
-                        pocetZnamek += 1;
-                    }
-                    // Cyklus skončí, když uživatel zadá nulu.
-                } while (zadanaZnamka != 0);
-
-                // Vypočteme aritmetický průměr známek studenta.
-                double prumer = soucetZnamek / pocetZnamek;
-                Console.WriteLine("Průměr známek studenta je {0}", prumer);
-
-                Console.WriteLine("Chcete vypočítat půrměr známek pro dalšího studenta? (A/N)");
-                dalsiStudent = Console.ReadLine();
-
-            } while (dalsiStudent == "A");
+                    break;
+                }
+                soucet += Int32.Parse(zadane);
+            }
+            Console.WriteLine("Součet čísel je {0}", soucet);
 
             Console.ReadKey();
         }
