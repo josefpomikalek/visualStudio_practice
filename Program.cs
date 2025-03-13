@@ -249,15 +249,32 @@
             //************************************************************************
             //************************************************************************
 
+            //Console.Write("Zadejte počet čísel: ");
+            //int pocetCisel = Int32.Parse(Console.ReadLine());
+            //int soucet = 0;
+            //for (int i = 1; i <= pocetCisel; i++)
+            //{
+            //    Console.Write("Zadejte {0}. číslo: ", i);
+            //    soucet += Int32.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine("Součet zadaných čísel = {0}", soucet);
+
+            //************************************************************************
+            //************************************************************************
+
             Console.Write("Zadejte počet čísel: ");
             int pocetCisel = Int32.Parse(Console.ReadLine());
+            int[] poleCisel = new int[pocetCisel];
             int soucet = 0;
-            for (int i = 1; i <= pocetCisel; i++)
+            for (int i = 0; i < pocetCisel; i++)
             {
-                Console.Write("Zadejte {0}. číslo: ", i);
-                soucet += Int32.Parse(Console.ReadLine());
+                Console.Write("Zadejte {0}. číslo: ", i + 1);
+                int cislo = Int32.Parse(Console.ReadLine());
+                poleCisel[i] = cislo;
+                soucet += cislo;
             }
-            Console.WriteLine("Součet zadaných čísel = {0}", soucet);
+            Console.WriteLine("Součet je {0}", soucet);
+            Console.WriteLine("Druhé číslo je {0}", poleCisel[1]);
 
             Console.ReadKey();
         }
