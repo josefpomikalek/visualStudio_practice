@@ -357,19 +357,49 @@
             //************************************************************************
             //************************************************************************
 
-            for (int i = 1; i <= 10; i++)
-            {
-                // V každém běhu cyklu se vykoná tento vnořený cyklus
-                for (int j = 1; j <= 10; j++)
-                {
-                    // Vypisuje násobky čísla na jeden řádek
-                    Console.Write("{0} ", i * j);
-                }
-                // Odřádkujeme, abychom násobky dalšího čísla vypsali na samostatný řádek
-                // a cyklus jede znovu
-                Console.WriteLine();
-            }
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    // V každém běhu cyklu se vykoná tento vnořený cyklus
+            //    for (int j = 1; j <= 10; j++)
+            //    {
+            //        // Vypisuje násobky čísla na jeden řádek
+            //        Console.Write("{0} ", i * j);
+            //    }
+            //    // Odřádkujeme, abychom násobky dalšího čísla vypsali na samostatný řádek
+            //    // a cyklus jede znovu
+            //    Console.WriteLine();
+            //}
 
+            //************************************************************************
+            //************************************************************************
+
+            string dalsiStudent;
+            do
+            {
+                double soucetZnamek = 0;
+                int pocetZnamek = 0;
+                int zadanaZnamka = 0;
+
+                do
+                {
+                    Console.WriteLine("Zadejte známku studenta (pokud chcete zadávání ukončit, zadejte nulu):");
+                    zadanaZnamka = Int32.Parse(Console.ReadLine());
+                    if (zadanaZnamka != 0)
+                    {
+                        soucetZnamek += zadanaZnamka;
+                        pocetZnamek += 1;
+                    }
+                    // Cyklus skončí, když uživatel zadá nulu.
+                } while (zadanaZnamka != 0);
+
+                // Vypočteme aritmetický průměr známek studenta.
+                double prumer = soucetZnamek / pocetZnamek;
+                Console.WriteLine("Průměr známek studenta je {0}", prumer);
+
+                Console.WriteLine("Chcete vypočítat půrměr známek pro dalšího studenta? (A/N)");
+                dalsiStudent = Console.ReadLine();
+
+            } while (dalsiStudent == "A");
 
             Console.ReadKey();
         }
