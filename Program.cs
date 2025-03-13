@@ -266,7 +266,7 @@
             int pocetCisel = Int32.Parse(Console.ReadLine());
             int[] poleCisel = new int[pocetCisel];
             int soucet = 0;
-            for (int i = 0; i < pocetCisel; i++)
+            for (int i = 0; i < poleCisel.GetLength(0); i++)
             {
                 Console.Write("Zadejte {0}. číslo: ", i + 1);
                 int cislo = Int32.Parse(Console.ReadLine());
@@ -275,7 +275,8 @@
             }
             Console.WriteLine("Součet je {0}", soucet);
             Console.WriteLine("Druhé číslo je {0}", poleCisel[1]);
-
+            Console.WriteLine("Počet čísel v poli je {0}", poleCisel.GetLength(0));
+                                 
             Console.ReadKey();
         }
     }
