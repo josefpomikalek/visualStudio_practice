@@ -280,37 +280,51 @@
             //************************************************************************
             //************************************************************************
 
-            Console.Write("Zadejte počet čísel: ");
-            int pocetCisel = Int32.Parse(Console.ReadLine());
-            int[] poleCisel = new int[pocetCisel];
-            
-            for (int i = 0; i < pocetCisel; i++)
+            //Console.Write("Zadejte počet čísel: ");
+            //int pocetCisel = Int32.Parse(Console.ReadLine());
+            //int[] poleCisel = new int[pocetCisel];
+
+            //for (int i = 0; i < pocetCisel; i++)
+            //{
+            //    Console.Write("{0}. číslo: ", i + 1);
+            //    poleCisel[i] = Int32.Parse(Console.ReadLine());
+            //}
+
+            //int minimum = poleCisel[0];
+            //for (int i = 0; i < poleCisel.GetLength(0); i++)
+            //{
+            //    if (poleCisel[i] < minimum)
+            //    {
+            //        minimum = poleCisel[i];
+            //    }
+            //}
+
+            //int maximum = poleCisel[0];
+            //for (int i = 0; i < poleCisel.GetLength(0); i++)
+            //{
+            //    if (poleCisel[i] > maximum)
+            //    {
+            //        maximum = poleCisel[i];
+            //    }
+            //}
+
+            //Console.WriteLine("Nejmenší číslo je {0}", minimum);
+            //Console.WriteLine("Největší číslo je {0}", maximum);
+
+            //************************************************************************
+            //************************************************************************
+
+            int volba = 0;
+            do
             {
-                Console.Write("{0}. číslo: ", i + 1);
-                poleCisel[i] = Int32.Parse(Console.ReadLine());
-            }
-
-            int minimum = poleCisel[0];
-            for (int i = 0; i < poleCisel.GetLength(0); i++)
-            {
-                if (poleCisel[i] < minimum)
-                {
-                    minimum = poleCisel[i];
-                }
-            }
-
-            int maximum = poleCisel[0];
-            for (int i = 0; i < poleCisel.GetLength(0); i++)
-            {
-                if (poleCisel[i] > maximum)
-                {
-                    maximum = poleCisel[i];
-                }
-            }
-
-            Console.WriteLine("Nejmenší číslo je {0}", minimum);
-            Console.WriteLine("Největší číslo je {0}", maximum);
-
+                Console.WriteLine("Vyberte z následující nabídky:");
+                Console.WriteLine("1. Položka A");
+                Console.WriteLine("2. Položka B");
+                Console.WriteLine("3. Položka C");
+                Console.Write("Vaše volba (napište číslo): ");
+                volba = Int32.Parse(Console.ReadLine());
+            } while (volba < 1 || volba > 3);
+            Console.WriteLine("Zvolená možnost: {0}", volba);
 
             Console.ReadKey();
         }
