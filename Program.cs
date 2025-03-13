@@ -449,6 +449,11 @@
             //************************************************************************
 
             PrvniMetoda();
+            Console.WriteLine();
+
+            int x = NactiCislo();
+            Console.WriteLine("Načtené číslo x = {0}", x);
+
             Console.ReadKey();
 
         }
@@ -456,6 +461,11 @@
         {
             Console.WriteLine("Pozdrav z první metody.");
         }
-
+        static int NactiCislo()
+        {
+            Console.Write("Zadejte číslo: ");
+            int cislo = Int32.Parse(Console.ReadLine());
+            return cislo;
+        }
     }
 }
