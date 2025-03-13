@@ -422,30 +422,40 @@
             //************************************************************************
             //************************************************************************
 
-            Console.Write("Maximum výpisu násobilky: ");
-            int maximum = Int32.Parse(Console.ReadLine());
-            bool ukonceniVypisu = false;
+            //Console.Write("Maximum výpisu násobilky: ");
+            //int maximum = Int32.Parse(Console.ReadLine());
+            //bool ukonceniVypisu = false;
 
-            for (int i = 1; i <= 10; i++)
-            {
-                for (int j = 1; j <= 10; j++)
-                {
-                    Console.Write("{0} ", i * j);
-                    if ((i * j) >= maximum)
-                    {
-                        ukonceniVypisu = true;
-                        break;
-                    }
-                }
-                if (ukonceniVypisu == true)
-                {
-                    break;
-                }
-                Console.WriteLine();
-            }
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    for (int j = 1; j <= 10; j++)
+            //    {
+            //        Console.Write("{0} ", i * j);
+            //        if ((i * j) >= maximum)
+            //        {
+            //            ukonceniVypisu = true;
+            //            break;
+            //        }
+            //    }
+            //    if (ukonceniVypisu == true)
+            //    {
+            //        break;
+            //    }
+            //    Console.WriteLine();
+            //}
+            //Console.ReadKey();
+
+            //************************************************************************
+            //************************************************************************
+
+            PrvniMetoda();
             Console.ReadKey();
 
-
         }
+        static void PrvniMetoda()
+        {
+            Console.WriteLine("Pozdrav z první metody.");
+        }
+
     }
 }
