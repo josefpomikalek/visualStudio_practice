@@ -314,17 +314,45 @@
             //************************************************************************
             //************************************************************************
 
-            int volba = 0;
-            do
+            //int volba = 0;
+            //do
+            //{
+            //    Console.WriteLine("Vyberte z následující nabídky:");
+            //    Console.WriteLine("1. Položka A");
+            //    Console.WriteLine("2. Položka B");
+            //    Console.WriteLine("3. Položka C");
+            //    Console.Write("Vaše volba (napište číslo): ");
+            //    volba = Int32.Parse(Console.ReadLine());
+            //} while (volba < 1 || volba > 3);
+            //Console.WriteLine("Zvolená možnost: {0}", volba);
+
+            //************************************************************************
+            //************************************************************************
+
+            // Připravíme si pole čísel
+            int[] poleCisel = new int[3];
+            poleCisel[0] = 3;
+            poleCisel[1] = 7;
+            poleCisel[2] = 17;
+
+            // Připravíme si pole řetězců
+            string[] poleRetezcu = new string[4];
+            poleRetezcu[0] = "jedna";
+            poleRetezcu[1] = "dva";
+            poleRetezcu[2] = "tři";
+            poleRetezcu[3] = "čtyři";
+
+            Console.WriteLine("Pole čisel obsahuje následující prvky:");
+            foreach (int item in poleCisel)
             {
-                Console.WriteLine("Vyberte z následující nabídky:");
-                Console.WriteLine("1. Položka A");
-                Console.WriteLine("2. Položka B");
-                Console.WriteLine("3. Položka C");
-                Console.Write("Vaše volba (napište číslo): ");
-                volba = Int32.Parse(Console.ReadLine());
-            } while (volba < 1 || volba > 3);
-            Console.WriteLine("Zvolená možnost: {0}", volba);
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("Pole řetězců obsahuje následující prvky:");
+            foreach (string item in poleRetezcu)
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadKey();
         }
