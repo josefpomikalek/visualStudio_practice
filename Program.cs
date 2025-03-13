@@ -262,21 +262,56 @@
             //************************************************************************
             //************************************************************************
 
+            //Console.Write("Zadejte počet čísel: ");
+            //int pocetCisel = Int32.Parse(Console.ReadLine());
+            //int[] poleCisel = new int[pocetCisel];
+            //int soucet = 0;
+            //for (int i = 0; i < poleCisel.GetLength(0); i++)
+            //{
+            //    Console.Write("Zadejte {0}. číslo: ", i + 1);
+            //    int cislo = Int32.Parse(Console.ReadLine());
+            //    poleCisel[i] = cislo;
+            //    soucet += cislo;
+            //}
+            //Console.WriteLine("Součet je {0}", soucet);
+            //Console.WriteLine("Druhé číslo je {0}", poleCisel[1]);
+            //Console.WriteLine("Počet čísel v poli je {0}", poleCisel.GetLength(0));
+
+            //************************************************************************
+            //************************************************************************
+
             Console.Write("Zadejte počet čísel: ");
             int pocetCisel = Int32.Parse(Console.ReadLine());
             int[] poleCisel = new int[pocetCisel];
-            int soucet = 0;
+            
+            for (int i = 0; i < pocetCisel; i++)
+            {
+                Console.Write("{0}. číslo: ", i + 1);
+                poleCisel[i] = Int32.Parse(Console.ReadLine());
+            }
+
+            int minimum = poleCisel[0];
             for (int i = 0; i < poleCisel.GetLength(0); i++)
             {
-                Console.Write("Zadejte {0}. číslo: ", i + 1);
-                int cislo = Int32.Parse(Console.ReadLine());
-                poleCisel[i] = cislo;
-                soucet += cislo;
+                if (poleCisel[i] < minimum)
+                {
+                    minimum = poleCisel[i];
+                }
             }
-            Console.WriteLine("Součet je {0}", soucet);
-            Console.WriteLine("Druhé číslo je {0}", poleCisel[1]);
-            Console.WriteLine("Počet čísel v poli je {0}", poleCisel.GetLength(0));
-                                 
+
+            int maximum = poleCisel[0];
+            for (int i = 0; i < poleCisel.GetLength(0); i++)
+            {
+                if (poleCisel[i] > maximum)
+                {
+                    maximum = poleCisel[i];
+                }
+            }
+
+            Console.WriteLine("Nejmenší číslo je {0}", minimum);
+            Console.WriteLine("Největší číslo je {0}", maximum);
+
+
             Console.ReadKey();
         }
     }
