@@ -404,22 +404,48 @@
             //************************************************************************
             //************************************************************************
 
-            int soucet = 0;
-            Console.WriteLine("Kolik budete chtít zadat čísel:");
-            int pocetCisel = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Zadávejte čísla. Pro předčasné ukončení zadejte K");
-            for (int i = 0; i < pocetCisel; i++)
+            //int soucet = 0;
+            //Console.WriteLine("Kolik budete chtít zadat čísel:");
+            //int pocetCisel = Int32.Parse(Console.ReadLine());
+            //Console.WriteLine("Zadávejte čísla. Pro předčasné ukončení zadejte K");
+            //for (int i = 0; i < pocetCisel; i++)
+            //{
+            //    string zadane = Console.ReadLine();
+            //    if (zadane == "K")
+            //    {
+            //        break;
+            //    }
+            //    soucet += Int32.Parse(zadane);
+            //}
+            //Console.WriteLine("Součet čísel je {0}", soucet);
+
+            //************************************************************************
+            //************************************************************************
+
+            Console.Write("Maximum výpisu násobilky: ");
+            int maximum = Int32.Parse(Console.ReadLine());
+            bool ukonceniVypisu = false;
+
+            for (int i = 1; i <= 10; i++)
             {
-                string zadane = Console.ReadLine();
-                if (zadane == "K")
+                for (int j = 1; j <= 10; j++)
+                {
+                    Console.Write("{0} ", i * j);
+                    if ((i * j) >= maximum)
+                    {
+                        ukonceniVypisu = true;
+                        break;
+                    }
+                }
+                if (ukonceniVypisu == true)
                 {
                     break;
                 }
-                soucet += Int32.Parse(zadane);
+                Console.WriteLine();
             }
-            Console.WriteLine("Součet čísel je {0}", soucet);
-
             Console.ReadKey();
+
+
         }
     }
 }
