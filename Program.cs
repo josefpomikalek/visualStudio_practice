@@ -461,6 +461,13 @@
             {
                 Console.Write("{0} ", seznamZnamek[i]);
             }
+            Console.WriteLine();
+            Console.WriteLine();
+
+            int a = 15;
+            int soucet = SoucetCisel();
+            Console.WriteLine("a: {0}", a);
+            Console.WriteLine("soucet: {0}", soucet);
 
             Console.ReadKey();
 
@@ -486,6 +493,14 @@
                 znamky[i] = Int32.Parse(Console.ReadLine());
             }
             return znamky;
+        }
+        static int SoucetCisel()
+        {
+            Console.Write("1. číslo: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.Write("2. číslo: ");
+            int b = Int32.Parse(Console.ReadLine());
+            return a + b;
         }
     }
 }
