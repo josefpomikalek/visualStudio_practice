@@ -453,6 +453,14 @@
 
             int x = NactiCislo();
             Console.WriteLine("Načtené číslo x = {0}", x);
+            Console.WriteLine();
+
+            int[] seznamZnamek = ZiskejZnamky();
+            Console.Write("Zadané známky: ");
+            for (int i = 0; i < seznamZnamek.Length; i++)
+            {
+                Console.Write("{0} ", seznamZnamek[i]);
+            }
 
             Console.ReadKey();
 
@@ -466,6 +474,18 @@
             Console.Write("Zadejte číslo: ");
             int cislo = Int32.Parse(Console.ReadLine());
             return cislo;
+        }
+        static int[] ZiskejZnamky()
+        {
+            Console.Write("Počet zadávaných známek: ");
+            int pocetZnamek = Int32.Parse(Console.ReadLine());
+            int[] znamky = new int[pocetZnamek];
+            for (int i = 0; i < pocetZnamek; i++)
+            {
+                Console.Write("{0}. známka: ", i + 1);
+                znamky[i] = Int32.Parse(Console.ReadLine());
+            }
+            return znamky;
         }
     }
 }
