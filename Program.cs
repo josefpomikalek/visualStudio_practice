@@ -31,6 +31,29 @@
             Console.WriteLine("Řetězec '{0}' začíná na 'A': {1}", retezec1, retezec1.StartsWith("A"));
             Console.WriteLine("Řetězec '{0}' končí na 'f': {1}", retezec1, retezec1.EndsWith("f"));
             Console.WriteLine("Řetězec '{0}' končí na 'b': {1}", retezec1, retezec1.EndsWith("b"));
+            Console.WriteLine();
+
+            string retezec2 = "Kvetoslava";
+            Console.Write("Výpis znaků v řetězci '{0}' na pozicicích 0, 4 a 5: ", retezec2);
+            Console.Write(retezec2[0]);
+            Console.Write(retezec2[4]);
+            Console.WriteLine(retezec2[5]);
+            Console.WriteLine("retezec2.IndexOf(\"a\"): {0}", retezec2.IndexOf("a"));
+            Console.WriteLine("retezec2.IndexOf(\"a\", 8): {0}", retezec2.IndexOf("a", 8));
+            Console.WriteLine(retezec2.Remove(7));
+            Console.WriteLine(retezec2.Remove(7, 1));
+            Console.WriteLine(retezec2.Substring(5));
+            Console.WriteLine(retezec2.Substring(5, 3));
+            Console.WriteLine(retezec2.ToUpper());
+            Console.WriteLine(retezec2.ToLower());
+
+            Console.WriteLine("retezec2.Replace(\"slava\", \"slav\"): {0}", retezec2.Replace("slava", "slav"));
+            string retezec10 = "  Petr  ";
+            string retezec11 = retezec10.Trim();
+            Console.WriteLine("retezec10 je {0}", retezec10);
+            Console.WriteLine("retezec11 je {0}", retezec11);
+            bool porovnani = retezec11 == "Petr";
+            Console.WriteLine(porovnani);
 
 
         }
