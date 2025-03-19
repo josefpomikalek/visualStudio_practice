@@ -55,6 +55,21 @@
             bool porovnani = retezec11 == "Petr";
             Console.WriteLine(porovnani);
 
+            DateTime aktualniDatumCas = DateTime.Now;
+            Console.WriteLine(aktualniDatumCas);
+            Console.WriteLine("aktualniDatumCas.Year = {0}", aktualniDatumCas.Year);
+            Console.WriteLine("aktualniDatumCas.Month = {0}", aktualniDatumCas.Month);
+            Console.WriteLine("aktualniDatumCas.Day = {0}", aktualniDatumCas.Day);
+            Console.WriteLine("aktualniDatumCas.Hour");
+            Console.WriteLine(aktualniDatumCas.Date);
+            Console.WriteLine();
+            DateTime datumNarozeni = new DateTime(1975, 11, 20);
+            DateTime datumNakupu = new DateTime(2025, 3, 19, 14, 45, 10);
+            Console.WriteLine(datumNarozeni);
+            Console.WriteLine(datumNakupu);
+            Console.WriteLine(datumNarozeni.ToShortDateString());
+            Console.WriteLine(datumNakupu.ToShortTimeString());
+
 
         }
 
