@@ -69,6 +69,22 @@
             Console.WriteLine(datumNakupu);
             Console.WriteLine(datumNarozeni.ToShortDateString());
             Console.WriteLine(datumNakupu.ToShortTimeString());
+            Console.WriteLine();
+            DateTime datumNastupu = new DateTime(2025, 3, 19);
+            Console.WriteLine(datumNastupu.ToShortDateString());
+            Console.WriteLine(datumNastupu.AddYears(-1).ToShortDateString());
+            Console.WriteLine();
+            DateTime datumStart = new DateTime(2025, 3, 10);
+            for (int i = 0; i < 30; i++)
+            {
+                Console.WriteLine(datumStart.AddDays(i).ToShortDateString());
+            }
+
+            DateTime dnesnidatum = DateTime.Now;
+            Console.WriteLine(dnesnidatum);
+
+            
+
 
 
         }
