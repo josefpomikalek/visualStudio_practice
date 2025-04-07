@@ -74,6 +74,7 @@
             Console.WriteLine(datumNastupu.ToShortDateString());
             Console.WriteLine(datumNastupu.AddYears(-1).ToShortDateString());
             Console.WriteLine();
+
             DateTime datumStart = new DateTime(2025, 3, 10);
             for (int i = 0; i < 30; i++)
             {
@@ -82,13 +83,27 @@
 
             DateTime dnesnidatum = DateTime.Now;
             Console.WriteLine(dnesnidatum);
-
-            
-
-
+            Console.WriteLine();
 
         }
-
+        
+        // ***** EXERCISE *****
+        static double PrumernaMzda(double[] mzdy)
+        {
+            if (mzdy.Length > 0)
+            {
+                double soucet = 0;
+                foreach (double mzda in mzdy)
+                {
+                    soucet += mzda;
+                }
+                return soucet / mzdy.Length;
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
     }
 }
