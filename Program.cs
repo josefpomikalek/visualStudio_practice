@@ -105,5 +105,25 @@
             }
         }
 
+        static double MinimalniMzda(double[] mzdy)
+        {
+            if (mzdy.Length > 0)
+            {
+                double min = mzdy[0];
+                foreach (double mzda in mzdy)
+                {
+                    if (mzda < min)
+                    {
+                        min = mzda;
+                    }
+                }
+                return min;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
     }
 }
