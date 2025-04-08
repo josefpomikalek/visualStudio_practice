@@ -125,5 +125,25 @@
             }
         }
 
+        static double MaximalniMzda(double[] mzdy)
+        {
+            if (mzdy.Length > 0)
+            {
+                double max = mzdy[0];
+                foreach (double mzda in mzdy)
+                {
+                    if (mzda > max)
+                    {
+                        max = mzda;
+                    }
+                }
+                return max;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
     }
 }
