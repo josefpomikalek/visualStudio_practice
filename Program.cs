@@ -85,6 +85,11 @@
             Console.WriteLine(dnesnidatum);
             Console.WriteLine();
 
+            double[] mzdyZamestnancu = { 15500, 18500, 23000, 14000, 38000, 20000 };
+            Console.WriteLine("Průměrná mzda je {0}", PrumernaMzda(mzdyZamestnancu));
+            Console.WriteLine("Nejnižší mzda je {0}", MinimalniMzda(mzdyZamestnancu));
+            Console.WriteLine("Nejvyšší mzda je {0}", MaximalniMzda(mzdyZamestnancu));
+
         }
         
         // ***** EXERCISE *****
