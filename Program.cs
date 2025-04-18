@@ -83,6 +83,7 @@
 
             DateTime dnesnidatum = DateTime.Now;
             Console.WriteLine(dnesnidatum);
+            Console.WriteLine("*****************************");
             Console.WriteLine();
 
             
@@ -91,6 +92,11 @@
             Console.WriteLine("Průměrná mzda je {0}", PrumernaMzda(mzdyZamestnancu));
             Console.WriteLine("Nejnižší mzda je {0}", MinimalniMzda(mzdyZamestnancu));
             Console.WriteLine("Nejvyšší mzda je {0}", MaximalniMzda(mzdyZamestnancu));
+            Console.WriteLine("*****************************");
+            Console.WriteLine();
+
+
+
 
         }
         
