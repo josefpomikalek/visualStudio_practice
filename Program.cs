@@ -96,11 +96,28 @@
             Console.WriteLine();
 
 
-
-
+            string[] uzivatelskaJmena = { "jan", "petr", "LUCIE", "jana" };
+            Console.WriteLine("Jan: {0}", ExistujeJmeno(uzivatelskaJmena, "Jan"));
+            Console.WriteLine("pEtR: {0}", ExistujeJmeno(uzivatelskaJmena, "pEtR"));
+            Console.WriteLine("lucka: {0}", ExistujeJmeno(uzivatelskaJmena, "lucka"));
+            Console.WriteLine("jan a: {0}", ExistujeJmeno(uzivatelskaJmena, "jan a"));
+            
         }
         
         // ***** EXERCISE *****
+        static bool ExistujeJmeno(string[] jmena, string hledaneJmeno)
+        {
+            foreach (string jmeno in jmena)
+            {
+                if (jmeno.ToLower() == hledaneJmeno.ToLower())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
         static double PrumernaMzda(double[] mzdy)
         {
             if (mzdy.Length > 0)
