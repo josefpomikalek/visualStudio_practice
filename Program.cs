@@ -106,7 +106,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("*****************************");
             Console.WriteLine();
-            Narozeniny(new DateTime(1980, 10, 19));
+            Narozeniny(new DateTime(1980, 04, 19));
 
         }
         
@@ -119,7 +119,7 @@ namespace ConsoleApp1
             Console.WriteLine(DateTime.Now.Date);
             Console.WriteLine(datumNarozeni.Date.DayOfYear);
             Console.WriteLine(DateTime.Now.DayOfYear);
-            if (datumNarozeni.Date == DateTime.Now.Date)
+            if (datumNarozeni.Date.Day == DateTime.Now.Date.Day && datumNarozeni.Date.Month == DateTime.Now.Date.Month)
             {
                 Console.WriteLine("Blahopřeji k narozeninám");
             }
