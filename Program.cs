@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1
+﻿using System.Net.NetworkInformation;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
@@ -101,10 +103,41 @@
             Console.WriteLine("pEtR: {0}", ExistujeJmeno(uzivatelskaJmena, "pEtR"));
             Console.WriteLine("lucka: {0}", ExistujeJmeno(uzivatelskaJmena, "lucka"));
             Console.WriteLine("jan a: {0}", ExistujeJmeno(uzivatelskaJmena, "jan a"));
-            
+
+            Console.WriteLine("*****************************");
+            Console.WriteLine();
+            Narozeniny(new DateTime(1980, 10, 19));
+
         }
         
         // ***** EXERCISE *****
+        static void Narozeniny(DateTime datumNarozeni)
+        {
+            int pocetLet = DateTime.Now.Year - datumNarozeni.Year;
+            Console.WriteLine("Počet let: {0}", pocetLet);
+            Console.WriteLine(datumNarozeni.Date);
+            Console.WriteLine(DateTime.Now.Date);
+            Console.WriteLine(datumNarozeni.Date.DayOfYear);
+            Console.WriteLine(DateTime.Now.DayOfYear);
+            if (datumNarozeni.Date == DateTime.Now.Date)
+            {
+                Console.WriteLine("Blahopřeji k narozeninám");
+            }
+            else
+            {
+                Console.Write("Počet dní do narozenin: ");
+                if (datumNarozeni.Date.DayOfYear > DateTime.Now.Date.DayOfYear)
+                {
+                    Console.WriteLine(datumNarozeni.DayOfYear - DateTime.Now.DayOfYear);
+                }
+                else
+                {
+                    Console.WriteLine(365 - (DateTime.Now.DayOfYear - datumNarozeni.DayOfYear));
+                }
+            }
+        }
+
+
         static bool ExistujeJmeno(string[] jmena, string hledaneJmeno)
         {
             foreach (string jmeno in jmena)
